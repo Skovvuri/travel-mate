@@ -1,0 +1,8 @@
+.search-bar {
+  border: 1px solid;
+  padding: 15px;
+}
+.row {
+  justify-content: center;
+  margin-top: 30px;
+}
