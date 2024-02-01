@@ -1,8 +1,76 @@
+/* Uncomment the following styles if needed for .search-bar and .row */
+/*
 .search-bar {
   border: 1px solid;
   padding: 15px;
 }
+
 .row {
   justify-content: center;
   margin-top: 30px;
+}
+*/
+
+/* Global styles for the entire body */
+body {
+    font-family: 'Heebo', sans-serif; /* Use the desired font from Google Fonts */
+}
+
+/* Header styles */
+header {
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 15px 0;
+}
+
+/* Additional styling for header elements within a row */
+header .row {
+    margin-bottom: 15px;
+}
+
+/* Styling for the logo within the header */
+header .logo {
+    max-width: 200px;
+}
+
+/* Label text color for the input within the search bar */
+header .form-label {
+    color: #212529;
+}
+
+/* Styles for the search bar */
+header .search-bar {
+    position: relative;
+}
+
+/* Positioning for icons within the search bar */
+header .search-bar i {
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+}
+
+/* Padding for the destination input to accommodate the icon */
+header .destination {
+    padding-left: 40px;
+}
+
+/* Styling for the search button */
+header .search-button {
+    width: 100%;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 767px) {
+    header .row {
+        margin-bottom: 10px;
+    }
+
+    header .search-button-wrap {
+        padding-top: 1.5rem;
+    }
+
+    header .search-button {
+        width: 100%;
+    }
 }
