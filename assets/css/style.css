@@ -10,7 +10,6 @@
   margin-top: 30px;
 }
 */
-
 /* Global styles for the entire body */
 body {
     font-family: 'Heebo', sans-serif; /* Use the desired font from Google Fonts */
@@ -60,6 +59,38 @@ header .search-button {
     width: 100%;
 }
 
+
+/* Custom styles for the place section */
+.place-section {
+    padding: 50px 0;
+}
+
+.places {
+    padding: 0 15px;
+}
+
+.top-places-visit {
+    margin-bottom: 30px;
+}
+
+/* Weather forecast style */
+.fs-5-card {
+    color: white !important;
+    height: 15rem;
+    padding: 5px;
+    border: none;
+  }
+
+  .card-forecast {
+        background: linear-gradient(to bottom
+        , #0e0f12, #032897, #183693);
+    
+  }
+
+.card-forecast .list-group-item {
+    background-color: transparent;
+}
+
 /* Responsive adjustments for small screens */
 @media (max-width: 767px) {
     header .row {
@@ -72,5 +103,11 @@ header .search-button {
 
     header .search-button {
         width: 100%;
+    }
+
+    .img-location,
+    .places {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
