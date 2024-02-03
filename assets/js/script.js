@@ -92,6 +92,12 @@ $(document).ready(function () {
 $(".search-button").on("click", function () {
   var city = $(".destination").val();
   $(".destination").val("");
+  // Fetch the selected start date from the date range picker
+  var startDate = $("#dateRange")
+    .data("daterangepicker")
+    .startDate.format("YYYY-MM-DD");
+  //log the startdate
+  console.log(startDate);
   // Save the city to local storage
   console.log(city);
   var cities = JSON.parse(localStorage.getItem("cities")) || [];
@@ -106,10 +112,9 @@ $(".search-button").on("click", function () {
   localStorage.setItem("cities", JSON.stringify(cities));
 
   // Fetch weather data and update UI
-  fetchWeather(city);
+  fetchWeather(city, startDate);
 });
-
-function fetchWeather(city) {
+function fetchWeather(city, startDate) {
   var geocodeURL =
     "https://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
@@ -122,8 +127,6 @@ function fetchWeather(city) {
     .then(function (data) {
       var lat = data[0].lat;
       var lon = data[0].lon;
-
-      // createHistory(city);
 
       var queryURL =
         "https://api.openweathermap.org/data/2.5/forecast?lat=" +
@@ -140,8 +143,25 @@ function fetchWeather(city) {
           var weatherData = result;
           console.log(weatherData);
 
-          // Update the UI with weather data
-          updateUI(weatherData);
+          var startDateString = moment(startDate).format("MM/DD/YYYY");
+
+          for (var i = 0; i < weatherData.list.length; i++) {
+            var weatherDateString = moment
+              .unix(weatherData.list[i].dt)
+              .format("MM/DD/YYYY");
+
+            if (weatherDateString === startDateString) {
+              startIndex = i;
+              break;
+            }
+          }
+
+          if (startIndex !== -1) {
+            // If start date index is found
+            updateUI(weatherData, startIndex);
+          } else {
+            console.log("Start date not found in weather data.");
+          }
         })
         .catch(function (error) {
           console.log("Error fetching weather data:", error);
@@ -152,38 +172,25 @@ function fetchWeather(city) {
     });
 }
 
-function updateUI(weatherData) {
-  for (var i = 0; i < weatherData.list.length; i += 8) {
+function updateUI(weatherData, startIndex) {
+  for (var i = startIndex; i < startIndex + 6 * 8; i += 8) {
+    var indexOffset = Math.floor((i - startIndex) / 8); // Calculate the index offset
     var date = new Date(weatherData.list[i].dt * 1000);
-    var date1 = new Date(weatherData.list[1].dt * 1000);
-    var date6 = new Date(weatherData.list[39].dt * 1000);
-    var cardTitleSelector = ".card-title-" + (i / 8 + 1);
-    var tempSelector = ".temp-" + (i / 8 + 1);
-    var windSelector = ".wind-" + (i / 8 + 1);
-    var humiditySelector = ".humidity-" + (i / 8 + 1);
-    var iconsEl = ".icon-" + (i / 8 + 1);
+    var cardTitleSelector = ".card-title-" + (indexOffset + 1);
+    var tempSelector = ".temp-" + (indexOffset + 1);
+    var windSelector = ".wind-" + (indexOffset + 1);
+    var humiditySelector = ".humidity-" + (indexOffset + 1);
+    var iconsEl = ".icon-" + (indexOffset + 1);
     var iconNum = weatherData.list[i].weather[0].icon;
-    var iconNum1 = weatherData.list[0].weather[0].icon;
-    var iconNum6 = weatherData.list[39].weather[0].icon;
     var icon = "http://openweathermap.org/img/w/" + iconNum + ".png";
-    var icon1 = "http://openweathermap.org/img/w/" + iconNum1 + ".png";
-    var icon6 = "http://openweathermap.org/img/w/" + iconNum6 + ".png";
-    $(".icon-1").attr("src", icon1);
-    $(".icon-6").attr("src", icon6);
+
     $(iconsEl).attr("src", icon);
-    $(".city").text(weatherData.city.name + " " + date1.toLocaleDateString());
-    $(".humidity-6").text(
-      "Humidity: " + weatherData.list[39].main.humidity + "%"
-    );
-    $(".wind-6").text("Wind: " + weatherData.list[39].wind.speed + " KPH");
-    $(".temp-6").text("Temperature: " + tempCelsius6 + "°C");
-    // Convert temperature from Kelvin to Celsius
-    var tempCelsius = (weatherData.list[i].main.temp - 273.15).toFixed(2);
-    $(".card-title-6").text(date6.toLocaleDateString());
-    var tempCelsius6 = (weatherData.list[39].main.temp - 273.15).toFixed(2);
-    // Update the UI elements with weather data
     $(cardTitleSelector).text(date.toLocaleDateString());
-    $(tempSelector).text("Temperature: " + tempCelsius + "°C");
+    $(tempSelector).text(
+      "Temperature: " +
+        (weatherData.list[i].main.temp - 273.15).toFixed(2) +
+        "°C"
+    );
     $(windSelector).text("Wind: " + weatherData.list[i].wind.speed + " KPH");
     $(humiditySelector).text(
       "Humidity: " + weatherData.list[i].main.humidity + "%"
