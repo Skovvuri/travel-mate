@@ -91,6 +91,17 @@ header .search-button {
 .card-forecast .list-group-item {
   background-color: transparent;
 }
+.footer {
+  padding: 25px 0;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 992px) {
+  .card-wrap {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
 
 /* Responsive adjustments for small screens */
 @media (max-width: 767px) {
