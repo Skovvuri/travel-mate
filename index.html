@@ -26,6 +26,10 @@
     <title>Travel-Mate</title>
 </head>
 <body>
+
+<!-- Container to display alerts -->
+<div id="alertContainer" class="fixed-top"></div>
+
 <!--  Header -->
 <header>
     <div class="container">
@@ -95,51 +99,37 @@
     </div>
 </section>
 
-
-<section class="forecast-week">
+<section class="forecast-week mt-4">
     <div class="container">
         <h3 class="forecast-title">
-            The forecast for the duration of your stay: (up to 7-days)</h3>
-        <div class="row">
-            <!-- First day forecast -->
-            <div class="col">
-                <div class="card card-forecast" style="width: 12rem">
-                    <ul class="list-group list-group-flush fs-5-card ">
-                        <h3 class="card-title-1 fs-5-card">Day 1</h3>
-                        <p class="list-group-item fs-5-card "><img class="icon-1" src=""></img></p>
-                        <p class="list-group-item fs-5-card  temp-1">Temp:</p>
-                        <p class="list-group-item fs-5-card  wind-1">Wind:</p>
-                        <p class="list-group-item fs-5-card  humidity-1">Humidity:</p>
-                    </ul>
-                </div>
-            </div>
-            <!-- Second day forecast -->
-            <div class="col">
-                <div class="card card-forecast" style="width: 12rem">
-                    <ul class="list-group list-group-flush fs-5-card ">
-                        <h3 class="card-title-2 fs-5-card">Day 2</h3>
-                        <p class="list-group-item fs-5-card "><img class="icon-2" src=""></img></p>
-                        <p class="list-group-item fs-5-card  temp-2">Temp:</p>
-                        <p class="list-group-item fs-5-card  wind-2">Wind:</p>
-                        <p class="list-group-item fs-5-card  humidity-2">Humidity:</p>
-                    </ul>
-                </div>
-            </div>
-            <!-- Third day forecast -->
-        <div class="col">
-            <div class="card card-forecast" style="width: 12rem">
-                <ul class="list-group list-group-flush fs-5-card ">
-                    <h3 class="card-title-3 fs-5-card">Day 3</h3>
-                    <p class="list-group-item fs-5-card "><img class="icon-3" src=""></img></p>
-                    <p class="list-group-item fs-5-card  temp-3">Temp:</p>
-                    <p class="list-group-item fs-5-card  wind-3">Wind:</p>
-                    <p class="list-group-item fs-5-card  humidity-3">Humidity:</p>
-                </ul>
-            </div>
-            </div>
+            The forecast for the duration of your stay: (up to 5-days)</h3>
+        <div class="row" id="forecastList">
+            <!-- Day forecast -->
         </div>
     </div>
 </section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Contact Us</h5>
+                <p>Email: info@travelmate.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Follow Us</h5>
+                <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 <!-- JavaScript dependencies -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Bootstrap JS -->
