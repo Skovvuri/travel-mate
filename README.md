@@ -31,16 +31,7 @@
 
 ## Built with
 
-    ¤ HTML
-    ¤ CSS
-    JavaScript
-    BootStrap
-    jQuery
-    moments.js
-    FontAwesome
-    Google fonts
-    Google Maps
-
+![Alt text](<assets/images/logos-tec.png>)
 
 ## Credit
 
