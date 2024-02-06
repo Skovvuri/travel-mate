@@ -77,18 +77,6 @@ header .search-button {
 }
 
 /* Weather forecast style */
-.forecast-week {
-  padding: 25px 0;
-  background-color: #f8f9fa;
-}
-
-.card-wrap {
-  flex: 0 0 20%; /* Each card takes 20% width, allowing 5 cards in a row */
-  max-width: 20%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
 .fs-5-card {
   color: white !important;
   height: 15rem;
@@ -101,22 +89,10 @@ header .search-button {
 }
 
 .card-forecast .list-group-item {
-  margin-bottom: 0;
   background-color: transparent;
 }
 
-.footer {
-  padding: 25px 0;
-}
-
 /* Responsive adjustments for small screens */
-@media (max-width: 992px) {
-  .card-wrap {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-}
-
 @media (max-width: 767px) {
   header .row {
     margin-bottom: 10px;
@@ -134,24 +110,5 @@ header .search-button {
   .places {
     width: 100%;
     margin-bottom: 20px;
-  }
-
-  .card-wrap {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  #forecastList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-wrap {
-    flex: none;
-    max-width: 250px;
-    width: 100%;
   }
 }
