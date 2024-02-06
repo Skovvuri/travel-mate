@@ -2,11 +2,11 @@
 
 ## Description
 
-    A travel App that enhance your experiance of exploring places by suggesting best places around the area to visit, top rated places for food and the weather forecaste during your stay. 
+    A travel App that enhance your experience of exploring places by suggesting best places around the area to visit, top rated places for food and the weather forecast during your stay. 
 
 ## User Story
 
-    As a frequent traveller with a passion for exploring new destinations, I want to use the Travel Mate app to enhance my travel experience by easily accessing information about top places to visit, delicious food spots that worth trying, and the weather forecast for the first 5 days at the destination, so could plan my trip to get the maximum experiance.
+    As a frequent traveller with a passion for exploring new destinations, I want to use the Travel Mate app to enhance my travel experience by easily accessing information about top places to visit, delicious food spots that worth trying, and the weather forecast for the first 5 days at the destination, so could plan my trip to get the maximum experience.
 
 ## Acceptance Criteria
 
@@ -31,16 +31,7 @@
 
 ## Built with
 
-    ¤ HTML
-    ¤ CSS
-    JavaScript
-    BootStrap
-    jQuery
-    moments.js
-    FontAwesome
-    Google fonts
-    Google Maps
-
+![Alt text](<assets/images/logos-tec.png>)
 
 ## Credit
 
