@@ -32,7 +32,7 @@ $(document).ready(function () {
   // Retrieve saved dates from local storage, if any
   var savedDates = localStorage.getItem("selectedDates");
   if (savedDates) {
-    $("#dateRange").val(savedDates);
+    // $("#dateRange").val(savedDates);
   }
   // Handle the 'apply' event when a date range is selected
   $("#dateRange").on("apply.daterangepicker", function (ev, picker) {
@@ -91,7 +91,7 @@ $(document).ready(function () {
 });
 $(".search-button").on("click", function () {
   var city = $(".destination").val();
-  $(".destination").val("");
+  // $(".destination").val("");
   // Fetch the selected start date from the date range picker
   var startDate = $("#dateRange").data("daterangepicker").startDate;
   var endDate = $("#dateRange").data("daterangepicker").endDate;
@@ -211,3 +211,26 @@ function updateUI(weatherData, startIndex) {
     );
   }
 }
+// Modal trigger
+document.getElementById("search-button").addEventListener("click", function () {
+  var destinationInput = document.getElementById("destination").value.trim();
+  var dateRangeInput = document.getElementById("dateRange").value.trim();
+
+  if (destinationInput === "" && dateRangeInput === "") {
+    $("#errorModalLabel").text("Error: Missing Information");
+    $(".modal-body").html(
+      "Please enter a destination and select dates before searching."
+    );
+    $("#errorModal").modal("show");
+  } else if (destinationInput === "") {
+    $("#errorModalLabel").text("Error: Missing Destination");
+    $(".modal-body").html("Please enter a destination before searching.");
+    $("#errorModal").modal("show");
+  } else if (dateRangeInput === "") {
+    $("#errorModalLabel").text("Error: Missing Dates");
+    $(".modal-body").html("Please select dates before searching.");
+    $("#errorModal").modal("show");
+  } else {
+    $("#errorModal").modal("hide");
+  }
+});
