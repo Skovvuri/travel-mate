@@ -2,22 +2,29 @@
 
 ## Description
 
-    A travel App that enhance your experience of exploring places by suggesting best places around the area to visit, top rated places for food and the weather forecast during your stay. 
+    A travel app that enhances your experience of exploring places by suggesting the best attractions in the area, top-rated places for food, and providing the weather forecast during your stay.
 
 ## User Story
 
-    As a frequent traveller with a passion for exploring new destinations, I want to use the Travel Mate app to enhance my travel experience by easily accessing information about top places to visit, delicious food spots that worth trying, and the weather forecast for the first 5 days at the destination, so could plan my trip to get the maximum experience.
+    As a frequent traveler with a passion for exploring new destinations, I want to use the Travel Mate app to enhance my travel experience. I aim to easily access information about the top places to visit, discover delicious food spots worth trying, and obtain the weather forecast for the first five days at the destination. This way, I can plan my trip to maximize my overall experience.
 
 ## Acceptance Criteria
 
-    ¤ When I search for a travel destination, I should be able to see a photo of my destination.
-    ¤ I should be able to view the name of each attraction.
-    ¤ I want to be able to browse a curated list of the top attractions and top 3 must-visit destinations in the area I am planning to visit.
-    ¤ I expect the app to provide recommendations for the top 3 local restaurants based on top ratings.
-    ¤ Each food establishment should have a dedicated field where the name of the place should be shown, as well as it’s location.
-    ¤ The app should display a detailed weather forecast for the duration of my stay at the chosen destination for up to 5 days.
-    ¤ Weather information should include daily temperature average, precipitation probability, wind speed, date and icons.
+    * When I search for a travel destination, I should be able to see a photo of my destination.
 
+    * I should be able to select dates for my trip.
+
+    * I should be able to view the name of each attraction.
+
+    * I want to be able to browse a curated list of the top attractions and the top 3 must-visit destinations in the area I’m planning to visit.
+
+    * I expect the app to provide recommendations for the top 3 local restaurants based on popularity.
+
+    * Each food establishment should have a dedicated field where the name of the place is shown, as well as its location.
+
+    * The app should display a detailed weather forecast for the duration of my stay at the chosen destination for up to 5 days.
+
+    * Weather information should include daily average temperature, precipitation probability, wind speed, date, and icons.
 
 ## Overview
 
