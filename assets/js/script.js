@@ -7,7 +7,7 @@ $(document).ready(function () {
     autoApply: true,
     autoUpdateInput: false,
     maxSpan: {
-      days: 7, // Limit the date range to 7 days
+      days: 4, // Limit the date range to 7 days
     },
     locale: {
       format: "DD-MM-YYYY", // Set the date format
@@ -93,26 +93,40 @@ $(".search-button").on("click", function () {
   var city = $(".destination").val();
   $(".destination").val("");
   // Fetch the selected start date from the date range picker
-  var startDate = $("#dateRange")
-    .data("daterangepicker")
-    .startDate.format("YYYY-MM-DD");
-  //log the startdate
-  console.log(startDate);
-  // Save the city to local storage
-  console.log(city);
-  var cities = JSON.parse(localStorage.getItem("cities")) || [];
+  var startDate = $("#dateRange").data("daterangepicker").startDate;
+  var endDate = $("#dateRange").data("daterangepicker").endDate;
 
-  // Trim the cities array to a maximum length of 5
-  if (cities.length >= 5) {
-    cities = cities.slice(-4); // Keep the last 4 elements
+  // Calculate the number of days selected
+  var numberOfDays = endDate.diff(startDate, "days") + 1; // Add 1 to include both start and end dates
+
+  // Clear existing weather forecast cards
+  $("#weatherForecastContainer").empty();
+
+  // Generate weather forecast cards
+  for (var i = 0; i < numberOfDays; i++) {
+    var forecastDate = startDate.clone().add(i, "days");
+    var cardHtml = `
+      <div class="col">
+        <div class="card card-forecast" style="width: 12rem">
+          <ul class="list-group list-group-flush fs-5-card">
+            <h3 class="card-title-${i + 1} fs-5-card">${forecastDate.format(
+      "MMM DD"
+    )}</h3>
+            <p class="list-group-item fs-5-card"><img class="icon-${
+              i + 1
+            }" src=""></p>
+            <p class="list-group-item fs-5-card temp-${i + 1}">Temperature:</p>
+            <p class="list-group-item fs-5-card wind-${i + 1}">Wind:</p>
+            <p class="list-group-item fs-5-card humidity-${i + 1}">Humidity:</p>
+          </ul>
+        </div>
+      </div>
+    `;
+    $("#weatherForecastContainer").append(cardHtml);
   }
 
-  // Push the new city to the end of the array
-  cities.push(city);
-  localStorage.setItem("cities", JSON.stringify(cities));
-
   // Fetch weather data and update UI
-  fetchWeather(city, startDate);
+  fetchWeather(city, startDate, numberOfDays, numberOfDays);
 });
 function fetchWeather(city, startDate) {
   var geocodeURL =

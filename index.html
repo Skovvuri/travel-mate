@@ -1,157 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossorigin="anonymous"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- Datepicker CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
     <!-- Bootstrap Icons CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
-          rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Favicon links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
     <title>Travel-Mate</title>
-</head>
-<body>
-<!--  Header -->
-<header>
-    <div class="container">
+  </head>
+  <body>
+    <!--  Header -->
+    <header>
+      <div class="container">
         <div class="row">
-            <!-- Logo section -->
-            <a href="/" class="logo">
-                <img src="./assets/images/logo-no-background.png" class="img-fluid" alt="Travel-Mate">
-            </a>
+          <!-- Logo section -->
+          <a href="/" class="logo">
+            <img
+              src="./assets/images/logo-no-background.png"
+              class="img-fluid"
+              alt="Travel-Mate"
+            />
+          </a>
         </div>
-    </div>
-    <div class="container">
+      </div>
+      <div class="container">
         <div class="row align-items-end">
-            <!-- Search bar section -->
-            <div class="col-md-5 col-lg-6 search-bar">
-                <!-- Input for destination -->
-                <label class="form-label" for="destination">Where are you going?</label>
-                <i class="bi bi-airplane-fill"></i>
-                <input type="text" class="destination form-control" id="destination" placeholder="Enter destination"/>
-            </div>
-            <div class="col-md-5 col-lg-4 search-bar">
-                <!-- Input for dates -->
-                <i class="bi bi-suitcase-lg-fill"></i>
-                <label for="dateRange"></label>
-                <input type="text" class="dateRange form-control text-center" id="dateRange" placeholder="Select dates">
-            </div>
-            <div class="col-md-2 search-button-wrap">
-                <!-- Search button -->
-                <button type="button" class="search-button btn btn-primary">Search</button>
-            </div>
+          <!-- Search bar section -->
+          <div class="col-md-5 col-lg-6 search-bar">
+            <!-- Input for destination -->
+            <label class="form-label" for="destination"
+              >Where are you going?</label
+            >
+            <i class="bi bi-airplane-fill"></i>
+            <input
+              type="text"
+              class="destination form-control"
+              id="destination"
+              placeholder="Enter destination"
+            />
+          </div>
+          <div class="col-md-5 col-lg-4 search-bar">
+            <!-- Input for dates -->
+            <i class="bi bi-suitcase-lg-fill"></i>
+            <label for="dateRange"></label>
+            <input
+              type="text"
+              class="dateRange form-control text-center"
+              id="dateRange"
+              placeholder="Select dates"
+            />
+          </div>
+          <div class="col-md-2 search-button-wrap">
+            <!-- Search button -->
+            <button type="button" class="search-button btn btn-primary">
+              Search
+            </button>
+          </div>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
 
-<!-- Place Section -->
-<section class="place-section">
-    <div class="container">
+    <!-- Place Section -->
+    <section class="place-section">
+      <div class="container">
         <div class="row">
-            <!-- Image Section (col-md-6) -->
-            <div class="col-md-6 img-location">
-                <img src="./assets/images/google_map.jpg" class="img-fluid" alt="Location Image">
-                <!-- TODO: Add Google Map API integration here -->
+          <!-- Image Section (col-md-6) -->
+          <div class="col-md-6 img-location">
+            <img
+              src="./assets/images/google_map.jpg"
+              class="img-fluid"
+              alt="Location Image"
+            />
+            <!-- TODO: Add Google Map API integration here -->
+          </div>
+
+          <!-- Places Information Section (col-md-6) -->
+          <div class="col-md-6 places">
+            <!-- Top Places to Visit Section -->
+            <div class="top-places-visit">
+              <h3>Top places to visit during your stay!</h3>
+              <ul class="list-group">
+                <li class="list-group-item">Place 1</li>
+                <li class="list-group-item">Place 2</li>
+                <li class="list-group-item">Place 3</li>
+              </ul>
             </div>
 
-            <!-- Places Information Section (col-md-6) -->
-            <div class="col-md-6 places">
-                <!-- Top Places to Visit Section -->
-                <div class="top-places-visit">
-                    <h3>Top places to visit during your stay!</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">Place 1</li>
-                        <li class="list-group-item">Place 2</li>
-                        <li class="list-group-item">Place 3</li>
-                    </ul>
-                </div>
-
-                <!-- Top Places for Food Section -->
-                <div class="top-places-food">
-                    <h3>Top places for food!</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">Food 1</li>
-                        <li class="list-group-item">Food 2</li>
-                        <li class="list-group-item">Food 3</li>
-                    </ul>
-                </div>
+            <!-- Top Places for Food Section -->
+            <div class="top-places-food">
+              <h3>Top places for food!</h3>
+              <ul class="list-group">
+                <li class="list-group-item">Food 1</li>
+                <li class="list-group-item">Food 2</li>
+                <li class="list-group-item">Food 3</li>
+              </ul>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<section class="forecast-week">
-    <div class="container">
+    <section class="forecast-week">
+      <div class="container">
         <h3 class="forecast-title">
-            The forecast for the duration of your stay: (up to 7-days)</h3>
-        <div class="row">
-            <!-- First day forecast -->
-            <div class="col">
-                <div class="card card-forecast" style="width: 12rem">
-                    <ul class="list-group list-group-flush fs-5-card ">
-                        <h3 class="card-title-1 fs-5-card">Day 1</h3>
-                        <p class="list-group-item fs-5-card "><img class="icon-1" src=""></img></p>
-                        <p class="list-group-item fs-5-card  temp-1">Temp:</p>
-                        <p class="list-group-item fs-5-card  wind-1">Wind:</p>
-                        <p class="list-group-item fs-5-card  humidity-1">Humidity:</p>
-                    </ul>
-                </div>
-            </div>
-            <!-- Second day forecast -->
-            <div class="col">
-                <div class="card card-forecast" style="width: 12rem">
-                    <ul class="list-group list-group-flush fs-5-card ">
-                        <h3 class="card-title-2 fs-5-card">Day 2</h3>
-                        <p class="list-group-item fs-5-card "><img class="icon-2" src=""></img></p>
-                        <p class="list-group-item fs-5-card  temp-2">Temp:</p>
-                        <p class="list-group-item fs-5-card  wind-2">Wind:</p>
-                        <p class="list-group-item fs-5-card  humidity-2">Humidity:</p>
-                    </ul>
-                </div>
-            </div>
-            <!-- Third day forecast -->
-        <div class="col">
-            <div class="card card-forecast" style="width: 12rem">
-                <ul class="list-group list-group-flush fs-5-card ">
-                    <h3 class="card-title-3 fs-5-card">Day 3</h3>
-                    <p class="list-group-item fs-5-card "><img class="icon-3" src=""></img></p>
-                    <p class="list-group-item fs-5-card  temp-3">Temp:</p>
-                    <p class="list-group-item fs-5-card  wind-3">Wind:</p>
-                    <p class="list-group-item fs-5-card  humidity-3">Humidity:</p>
-                </ul>
-            </div>
-            </div>
+          The forecast for the duration of your stay: (up to 5-days)
+        </h3>
+        <div class="row" id="weatherForecastContainer">
+          <!-- Weather forecast cards will be dynamically generated here -->
         </div>
-    </div>
-</section>
-<!-- JavaScript dependencies -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-<!-- Datepicker JS -->
-<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<!-- Custom JavaScript -->
-<script src="./assets/js/script.js"></script>
-
-</body>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contact Us</h5>
+            <p>Email: info@travelmate.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+          </div>
+          <div class="col-md-6">
+            <h5>Follow Us</h5>
+            <ul class="list-inline social-icons">
+              <li class="list-inline-item">
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Datepicker JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
