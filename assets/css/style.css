@@ -94,7 +94,9 @@ header .search-button {
 .footer {
   padding: 25px 0;
 }
-
+.card-forecast {
+  margin-bottom: 10px;
+}
 /* Responsive adjustments for small screens */
 @media (max-width: 992px) {
   .card-wrap {

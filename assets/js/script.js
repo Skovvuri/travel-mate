@@ -53,21 +53,18 @@ $(document).ready(function () {
     initializeAutocomplete("#destination", JSON.parse(cities));
   } else {
     $.getJSON("./models/data/cities.json", function (data) {
-
       // Check if the data is not empty and is an array
       if (Array.isArray(data) && data.length > 0) {
-
         // Store the list of cities in local storage
         localStorage.setItem("cities", JSON.stringify(data));
 
         // Initialize Autocomplete with the list of cities
         initializeAutocomplete("#destination", data);
         console.log("City data loaded successfully.");
-
       } else {
         // Handle the case when the JSON file is empty or not an array
         console.error(
-            "Error: Unable to load valid city data from the JSON file."
+          "Error: Unable to load valid city data from the JSON file."
         );
       }
     });
@@ -129,7 +126,7 @@ $(".search-button").on("click", function () {
     var forecastDate = startDate.clone().add(i, "days");
     var cardHtml = `
       <div class="col">
-        <div class="card card-forecast" style="width: 12rem">
+        <div class="card card-forecast" style="width: 12rem; height: 280px;">
           <ul class="list-group list-group-flush fs-5-card">
             <h3 class="card-title-${i + 1} fs-5-card">${forecastDate.format(
       "MMM DD"
