@@ -119,7 +119,10 @@ header .search-button {
     width: 100%;
   }
 
-  .img-location,
+  .img-location {
+    height: 100%
+  }
+ 
   .places {
     width: 100%;
     margin-bottom: 20px;
