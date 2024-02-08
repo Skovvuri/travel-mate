@@ -1,4 +1,4 @@
-# travel-mate
+# Travel-Mate
 
 ## Description
 
@@ -27,13 +27,13 @@
     * Weather information should include daily average temperature, precipitation probability, wind speed, date, and icons.
 
 ## Overview
-
+![Alt text](<assets/images/website.png>)
 
 ## Installation
 
     There is no installation required for this website. Simply 'click' on the link below and you will be taken directly to the website!
 
-    Link: 
+    Link: skovvuri.github.io/travel-mate/
 
 
 ## Built with
