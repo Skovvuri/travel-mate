@@ -38,12 +38,14 @@
 
 ## Built with
 
+
 ![Alt text](<assets/images/logos-tec.png>)
 
 ## Credit
 
+ChatGPT - https://chat.openai.com/
 
-
+W3 school - https://www.w3schools.com/
 
 ## License
 
