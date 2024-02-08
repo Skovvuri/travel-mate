@@ -13,7 +13,7 @@ let infowindow;
 // initalise startLocation of map on load of page
 function initMap() {
   console.log("initMap");
-  const startLocation = new google.maps.LatLng(53.4810, -2.2374);
+  const startLocation = new google.maps.LatLng(51.507218, -0.127586);
 
   // assign google-map element for intial map loading, and then load requests about location
   infowindow = new google.maps.InfoWindow();
@@ -23,7 +23,7 @@ function initMap() {
   });
 
   const request = {
-    query: "Restaraunts",
+    query: "London",
     fields: ["name", "geometry"],
   };
 
@@ -47,7 +47,7 @@ function createMarker(place) {
     map,
     position: place.geometry.location,
   });
-
+  console.log("createMarker");
   google.maps.event.addListener(marker, "click", () => {
     infowindow.setContent(place.name || "");
     infowindow.open(map);
@@ -55,3 +55,8 @@ function createMarker(place) {
 }
 
 window.initMap = initMap;
+
+// When a location is searched reload map with selected location.
+$(".search-button").on("click", function () {
+
+});
