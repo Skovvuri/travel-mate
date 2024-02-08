@@ -4,51 +4,30 @@
 
 // google api key
 
-
-
-//https://developers.google.com/maps/documentation/javascript/examples/map-simple?_gl=1*1jxxev7*_up*MQ..*_ga*MTQ5ODM4OTkxLjE3MDczOTI5NzY.*_ga_NRWSTWS78N*MTcwNzM5Mjk3NS4xLjAuMTcwNzM5MzAzMC4wLjAuMA..#maps_map_simple-javascript
-
-// let map
-
-// async function initMap() {
-//     const { Map } = await google.maps.importLibrary("maps");
-  
-//     map = new Map(document.getElementById("img-location"), {
-//       center: { lat: -34.397, lng: 150.644 },
-//       zoom: 8,
-//     });
-//   }
-  
-//   initMap();
-
-
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+// variables
 let map;
 let service;
 let infowindow;
 
-function initMap() {
-  const sydney = new google.maps.LatLng(-33.867, 151.195);
-  console.log(sydney);
 
+// initalise startLocation of map on load of page
+function initMap() {
+  console.log("initMap");
+  const startLocation = new google.maps.LatLng(53.4810, -2.2374);
+
+  // assign google-map element for intial map loading, and then load requests about location
   infowindow = new google.maps.InfoWindow();
   map = new google.maps.Map(document.getElementById("google-map"), {
-    center: sydney,
+    center: startLocation,
     zoom: 15,
   });
 
   const request = {
-    query: "Museum of Contemporary Art Australia",
+    query: "Restaraunts",
     fields: ["name", "geometry"],
   };
 
+  //intitalise map element with 
   service = new google.maps.places.PlacesService(map);
   service.findPlaceFromQuery(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
