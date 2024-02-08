@@ -119,7 +119,7 @@ header .search-button {
     width: 100%;
   }
 
-  .img-location {
+  #google-map {
     height: 100%
   }
  
