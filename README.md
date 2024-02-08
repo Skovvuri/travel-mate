@@ -27,7 +27,8 @@
     * Weather information should include daily average temperature, precipitation probability, wind speed, date, and icons.
 
 ## Overview
-![Alt text](<assets/images/website.png>)
+
+![Alt text](assets/images/website.png)
 
 ## Installation
 
@@ -35,13 +36,23 @@
 
     Link: skovvuri.github.io/travel-mate/
 
-
 ## Built with
 
-
-![Alt text](<assets/images/logos-tec.png>)
+![Alt text](assets/images/logos-tec.png)
 
 ## Credit
+
+Collaborators:
+
+Kirila Ruseva - https://github.com/unicorn453
+
+Volodymyr Shtyka - https://github.com/Volodymyr-Shtyka
+
+Shanmukha Kovvuri - https://github.com/Skovvuri
+
+Udani Karunaratne - https://github.com/udani521
+
+Additional tools used in the project:
 
 ChatGPT - https://chat.openai.com/
 
